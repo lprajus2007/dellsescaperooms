@@ -1,0 +1,43 @@
+.poster {
+    width: 450px;
+}
+
+.game-section {
+    margin-bottom: 30px;
+    text-align: justify;
+    border-bottom: 2px solid white;
+    padding-bottom: 50px;
+
+    .center {
+        text-align: center;
+    }
+
+    .left-div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0px 15px;
+    }
+
+    .right-div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .poster {
+        width: 100%;
+    }
+    .game-section {
+        margin-bottom: 30px;
+        .left-div {
+            width: 100%;
+            display: block;
+        }
+        .right-div {
+            width: 100%;
+            display: block;
+        }
+    }
+}
