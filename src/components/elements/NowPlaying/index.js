@@ -46,7 +46,7 @@ const HazelWood = () => (
         </div>
         <div className="right-div">
             <div className="poster">
-                <Carousel interval={3000} images={["hazelwood", "th1", "th2"]} showThumbs={false} width="450px" />
+                <Carousel interval={3600} images={["hazelwood", "th1", "th2"]} showThumbs={false} width="450px" />
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@ const MissionControl = () => (
     <div id="missioncontrol" className="game-section">
         <div className="left-div">
             <div className="poster">
-                <Carousel interval={3900} images={["missioncontrol", "mc1", "mc2", "mc3"]} showThumbs={false} width="450px" />
+                <Carousel interval={4500} images={["missioncontrol", "mc1", "mc2", "mc3"]} showThumbs={false} width="450px" />
             </div>
         </div>
         <div className="right-div">

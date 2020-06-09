@@ -6,6 +6,7 @@ import Sticky from "../components/helpers/Sticky"
 import StickyHeader from "../components/elements/StickyHeader"
 import NowPlaying from "../components/elements/NowPlaying"
 import MobileMenu from "../components/elements/MobileMenu"
+import SlickSlider from "../components/elements/Testimonies"
 
 import Carousel from "../components/helpers/Carousel";
 
@@ -82,24 +83,18 @@ export default class App extends Component {
                         </Sticky>
         
                         <div id="main">
-                                <section id="intro" className="main special">
-                                    <div className="content">
-                                        <Carousel interval={4500} images={["m1", "m2", "m3", "m4", "m5", "m6"]} showThumbs={false} width="450px" />
+                                <section id="intro" style={{ padding: '0px 0px !important' }} className="special">
+                                    <div style={{ height: '50vw', overflow: 'hidden' }} className="content">
+                                        <Carousel interval={3000} images={["m1", "m2", "m3", "m4", "m5", "m6"]} />
                                     </div>
                                 </section>  
                                 <NowPlaying />
                                 <section id="second" className="main special">
                                     <header className="major">
                                         <h1 className="gold">Reviews</h1>
-                                        <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                                        posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+                                        <p>We are the highest rated escape room in Wisconsin Dells on TripAdvisor. Checkout the reviews!</p>
                                     </header>
-                                    <p className="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-                                    <footer className="major">
-                                        <ul className="actions special">
-                                            <li><a href="generic.html" className="button">Learn More</a></li>
-                                        </ul>
-                                    </footer>
+                                    <SlickSlider />
                                 </section>
         
                                 <section id="cta" className="main special">
@@ -125,7 +120,6 @@ export default class App extends Component {
                                 <h2 className="gold">We are located in the beautiful Upper River District of Wisconsin Dells Downtown!</h2>
                                 <ul className="icons" style={{ float: 'none' }}>
                                     <li><h2 className="gold">Follow us on social:</h2></li>
-                                    <li><a href="#" className="icon brands fa-twitter alt gold"><span className="label">Twitter</span></a></li>
                                     <li><a href="#" className="icon brands fa-facebook-f alt gold"><span className="label">Facebook</span></a></li>
                                     <li><a href="#" className="icon brands fa-instagram alt gold"><span className="label">Instagram</span></a></li>
                                 </ul>
