@@ -20,6 +20,38 @@
 	width: 100%;
 }
 
+.bm-menu-wrap {
+	border-radius: 30px;
+	background: black;
+	width: 90vw !important;
+	margin-top: 40px;
+}
+
+.bm-item-list {
+	overflow: hidden;
+}
+
+.bm-menu {
+	background: black;
+	width: 100%;
+}
+
+.bm-item {
+	margin: 2em;
+}
+
+.carousel-root {
+	width: 450px;
+}
+
+.control-arrow {
+	padding-top: 32%;
+}
+
+.caption {
+	font-size: 1.5em;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -87,6 +119,18 @@ input, select, textarea {
 
 /* Basic */
 
+.mobile-only-view {
+	> * {
+		display: none !important;
+	}
+}
+
+.mobile-only-hide {
+	> * {
+		display: block !important;
+	}
+}
+
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -97,8 +141,31 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px) {
 
+		.mobile-only-hide {
+			> * {
+				display: none !important;
+			}
+		}
+
+		.mobile-only-view {
+			> * {
+				display: block !important;
+				font-size: larger;
+			}
+		}
+
+		.mobile-only-hide {
+			display: none;
+		}
+
 		html, body {
 			min-width: 320px;
+		}
+
+		.caption {
+			margin-top: 0px !important;
+			margin-left: 0px !important;
+			font-size: 1em;
 		}
 
 	}
@@ -166,6 +233,12 @@ input, select, textarea {
 				font-size: 11pt;
 			}
 
+			.caption {
+				margin-top: 0px !important;
+				margin-left: 0px !important;
+				font-size: 1em;
+			}
+
 		}
 
 	a {
@@ -174,7 +247,6 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
 		color: inherit;
 	}
 
@@ -247,6 +319,11 @@ input, select, textarea {
 
 		h1 {
 			font-size: 2em;
+		}
+
+		.caption {
+			margin-top: 0px !important;
+			margin-left: 0px !important;
 		}
 
 	}
@@ -1074,6 +1151,11 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 980px) {
+
+			.caption {
+				margin-left: 0px !important;
+				margin-top: 0px !important;
+			}
 
 			.row {
 				display: flex;
@@ -2184,7 +2266,7 @@ input, select, textarea {
 			line-height: 1;
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
+			font-weight: 900;
 		}
 
 		.icon > .label {
@@ -2266,6 +2348,11 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+
+			.caption {
+				margin-top: 0px !important;
+				margin-left: 0px !important;
+			}
 
 			.icon.major:before {
 				font-size: 4.75rem;
@@ -2734,7 +2821,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		margin: 0 0 2em 0;
+		margin: 0 4em;
 	}
 
 		.spotlight .content {
@@ -2874,6 +2961,7 @@ input, select, textarea {
 				max-width: 60%;
 				img {
 					width: 100%;
+					max-width: max-content;
 				}
 			}
 
@@ -2937,6 +3025,9 @@ input, select, textarea {
 
 			#header {
 				padding: 3em 1.5em 0.1em 1.5em ;
+				.logo {
+					max-width: none !important;
+				}
 			}
 
 				#header.alt {
@@ -2949,6 +3040,9 @@ input, select, textarea {
 
 			#header {
 				padding: 2.5em 1em 0.1em 1em ;
+				.logo {
+					max-width: none !important;
+				}
 			}
 
 				#header.alt {
@@ -2994,6 +3088,7 @@ input, select, textarea {
 
 		#nav a:hover {
 			color: #636363;
+			text-decoration: none !important;
 		}
 
 		#nav strong, #nav b {
@@ -3181,6 +3276,7 @@ input, select, textarea {
 				#main button.primary:hover,
 				#main .button.primary:hover {
 					background-color: #9acff2;
+					text-decoration: none !important;
 				}
 
 				#main input[type="submit"].primary:active,
@@ -3405,6 +3501,17 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
+			#main {
+				margin-top: 0px !important;
+				min-height: 60vw;
+
+				.special {
+					> .content {
+						min-height: 350px;
+					}
+				}
+			}
+
 			#main > .main {
 				padding: 3em 1.5em 1em 1.5em ;
 			}
@@ -3420,6 +3527,7 @@ input, select, textarea {
 
 			#main {
 				border-radius: 0;
+				margin-top: 0px;
 			}
 
 				#main > .main {
@@ -3507,16 +3615,30 @@ input, select, textarea {
 
 			#footer {
 				padding: 3em 1.5em 1em 1.5em ;
+				h2 {
+					font-size: 1em;
+				}
 			}
 
+			#footer > * {
+				width: 100% !important;
+				margin: 0 auto !important;
+			}
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 360px) {
 
 			#footer {
 				padding: 2.5em 1em 0.5em 1em ;
+				h2 {
+					font-size: 1em;
+				}
 			}
 
+			#footer > * {
+				width: 100% !important;
+				margin: 0 auto !important;
+			}
 		}
 
 /* Wrapper */
