@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.js"],"names":["Fourofour"],"mappings":"2FAAA,gCAIeA,UAFG,kBAAM","file":"component---src-pages-404-js-d9c389311e37d74ceaea.js","sourcesContent":["import React from 'react'\n\nconst Fourofour = () => <div>404 Page Not Found</div>\n\nexport default Fourofour;"],"sourceRoot":""}
