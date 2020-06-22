@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "dellsescaperooms",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Dells Escape Rooms Website",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "copyrighted",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.19.45",
     "gatsby-plugin-react-helmet": "^3.2.1",
@@ -32,12 +33,5 @@
   },
   "devDependencies": {
     "prettier": "^1.19.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

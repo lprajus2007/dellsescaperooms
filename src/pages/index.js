@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Helmet from "react-helmet"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Slide } from '@material-ui/core'
 
 import Sticky from "../components/helpers/Sticky"
 import StickyHeader from "../components/elements/StickyHeader"
@@ -12,13 +13,14 @@ import Carousel from "../components/helpers/Carousel";
 
 import "../css/main.scss"
 
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.png";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMenuOpen: false
+            isMenuOpen: false,
+            checked: false
         }
         this.body = React.createRef();
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -26,8 +28,10 @@ export default class App extends Component {
 
     componentDidMount() {
         setTimeout(() => {
-            console.log(this.body.current);
             this.body.current.className = "";
+            this.setState({
+                checked: true
+            })
         }, 300);
     }
 
@@ -51,7 +55,7 @@ export default class App extends Component {
               <title>Dells Escape Rooms</title>
               <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
             </Helmet>
-            <body ref={this.body} className="is-preload">
+            <div ref={this.body} className="is-preload">
                 <div id="wrapper outer-container">
                         <ul className="icons">
                             <li className="mobile-only-hide"><a href="#" className="icon brands fa-facebook-f alt gold"><span className="label">Facebook</span></a></li>
@@ -64,9 +68,11 @@ export default class App extends Component {
                             <li className="mobile-only-view"><MobileMenu isOpen={this.state.isMenuOpen} toggleMenu={this.toggleMenu} /></li>
                         </ul>
                         <header id="header" className="alt">
-                            <div className="logo">
-                                <img src={logo} />
-                            </div>
+                            <Slide direction="up" timeout={500} in={this.state.checked}>
+                                <div className="logo">
+                                    <img src={logo} />
+                                </div>
+                            </Slide>
                             <h2 className="caption gold" style={{ marginTop: "-50px", marginLeft: "75px" }}>Do you have what it takes to escape?!</h2>
                         </header>
                         <Sticky sides={{ top: 0 }}>
@@ -77,6 +83,8 @@ export default class App extends Component {
                                         <li><AnchorLink href="#second">Reviews</AnchorLink></li>
                                         <li><AnchorLink href="#cta">Groups</AnchorLink></li>
                                         <li><AnchorLink href="#faq">FAQ</AnchorLink></li>
+                                        <li><a href="https://dellsescaperooms.resova.us/gift-voucher">Gift Vouchers</a></li>
+                                        <li><a href="https://dellsescaperooms.resova.us/">Book Now</a></li>
                                     </ul>
                                 </nav>
                             </StickyHeader>
@@ -132,10 +140,10 @@ export default class App extends Component {
                                             height="100%"
                                             id="gmap_canvas"
                                             src="https://maps.google.com/maps?q=325%20Broadway%2C%20Wisconsin%20Dells&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                            frameborder="0"
+                                            frameBorder="0"
                                             scrolling="no"
-                                            marginheight="0"
-                                            marginwidth="0">
+                                            marginHeight="0"
+                                            marginWidth="0">
                                         </iframe>
                                         <a href="https://www.embedgooglemap.net/text-tools/number-each-line/"></a>
                                     </div>
@@ -153,7 +161,7 @@ export default class App extends Component {
                         </footer>
         
                 </div>
-            </body>
+            </div>
           </>        
         )
     }

@@ -53,6 +53,8 @@ class MobileMenu extends Component {
                 <div className="icon brands alt gold" ><AnchorLink href="#second" onClick={() => this.props.toggleMenu({ isOpen: false })}>Reviews</AnchorLink></div>
                 <div className="icon brands alt gold" ><AnchorLink href="#cta" onClick={() => this.props.toggleMenu({ isOpen: false })}>Groups</AnchorLink></div>
                 <div className="icon brands alt gold" ><AnchorLink href="#faq" onClick={() => this.props.toggleMenu({ isOpen: false })}>FAQ</AnchorLink></div>
+                <div className="icon brands alt gold" ><a href="https://dellsescaperooms.resova.us/gift-voucher" onClick={() => this.props.toggleMenu({ isOpen: false })}>Gift Vouchers</a></div>
+                <div className="icon brands alt gold" ><a href="https://dellsescaperooms.resova.us/" onClick={() => this.props.toggleMenu({ isOpen: false })}>Book Now</a></div>
             </Menu>
         </MenuWrap>
     );

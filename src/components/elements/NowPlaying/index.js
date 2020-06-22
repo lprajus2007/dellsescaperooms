@@ -23,7 +23,7 @@ const BombSquad = () => (
                 what it takes time to survive? If not… KABOOM!
             </p>
             <ul className="actions special">
-                <li><a href="https://dellsescaperooms.resova.us" target="_blank" class="button primary">Book Now</a></li>
+                <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
     </div>
@@ -41,7 +41,7 @@ const HazelWood = () => (
                 room for error on this one, sticky hands!
             </p>
             <ul className="actions special">
-                <li><a href="https://dellsescaperooms.resova.us" target="_blank" class="button primary">Book Now</a></li>
+                <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
         <div className="right-div">
@@ -69,7 +69,7 @@ const MissionControl = () => (
                 astronaut! Save the day or say your prayers… do you have what it takes?
             </p>
             <ul className="actions special">
-                <li><a href="https://dellsescaperooms.resova.us" target="_blank" class="button primary">Book Now</a></li>
+                <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
     </div>
@@ -91,7 +91,7 @@ const Disavowed = () => (
                 </i>
             </p>
             <ul className="actions special">
-                <li><a href="https://dellsescaperooms.resova.us" target="_blank" class="button primary">Book Now</a></li>
+                <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
         <div className="left-div">
@@ -123,7 +123,7 @@ const Wellington = () => (
                 </i>
             </p>
             <ul className="actions special">
-                <li><a href="https://dellsescaperooms.resova.us" target="_blank" class="button primary">Book Now</a></li>
+                <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
     </div>
@@ -131,8 +131,8 @@ const Wellington = () => (
 
 export default () => (
     <>
-        <section id="first" class="main special">
-            <header class="major">
+        <section id="first" className="main special">
+            <header className="major">
                 <h1 className="gold">Now Playing</h1>
             </header>
             <BombSquad />

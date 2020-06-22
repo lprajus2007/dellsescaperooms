@@ -13,7 +13,6 @@ import disavowed1 from "../../assets/images/disavowed1.png"
 import disavowed2 from "../../assets/images/disavowed2.png"
 import hazelwood from "../../assets/images/hazelwood.png"
 import hotseat from "../../assets/images/hotseat.png"
-import logo from "../../assets/images/logo.png"
 import m1 from "../../assets/images/m1.png"
 import m2 from "../../assets/images/m2.png"
 import m3 from "../../assets/images/m3.png"
@@ -39,7 +38,6 @@ const importedImages = {
     disavowed2,
     hazelwood,
     hotseat,
-    logo,
     mc1,
     mc2,
     mc3,
@@ -60,8 +58,8 @@ const importedImages = {
 export default (props) => (
     <Carousel controls={false} indicators={false} interval={props.interval || 3500} style={{ margin: '20px auto' }}>
         {
-            map(props.images, (image) => (
-                <Carousel.Item>
+            map(props.images, (image, i) => (
+                <Carousel.Item key={`carousel-item-${i}`}>
                     <AnchorLink href={`#${image}`}>
                         <img
                             className="d-block w-100"
