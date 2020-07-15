@@ -136,16 +136,14 @@ export default class App extends Component {
                                 <div className="mapouter">
                                     <div className="gmap_canvas">
                                         <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9781667885386!2d-89.77475708433607!3d43.627813362089576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807460628551015%3A0xc42b4ab1aa96994e!2sDells%20Escape%20Rooms!5e0!3m2!1sen!2sca!4v1594781602143!5m2!1sen!2sca"
                                             width="100%"
                                             height="100%"
-                                            id="gmap_canvas"
-                                            src="https://maps.google.com/maps?q=325%20Broadway%2C%20Wisconsin%20Dells&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                            frameBorder="0"
-                                            scrolling="no"
-                                            marginHeight="0"
-                                            marginWidth="0">
-                                        </iframe>
-                                        <a href="https://www.embedgooglemap.net/text-tools/number-each-line/"></a>
+                                            frameborder="0"
+                                            allowfullscreen=""
+                                            aria-hidden="false"
+                                            tabindex="0"
+                                        />
                                     </div>
                                 </div>
                                 <dl className="alt">

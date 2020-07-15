@@ -5,7 +5,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "./styles.scss"
 
 import Carousel from "../../helpers/Carousel";
-import MobileMenu from "../MobileMenu";
 
 const BombSquad = () => (
     <div id="bombsquad" className="game-section">
