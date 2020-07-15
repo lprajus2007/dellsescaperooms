@@ -62,6 +62,7 @@ export default (props) => (
                 <Carousel.Item key={`carousel-item-${i}`}>
                     <AnchorLink href={`#${image}`}>
                         <img
+                            alt="room"
                             className="d-block w-100"
                             src={importedImages[image]}
                         />

@@ -58,11 +58,11 @@ export default class App extends Component {
             <div ref={this.body} className="is-preload">
                 <div id="wrapper outer-container">
                         <ul className="icons">
-                            <li className="mobile-only-hide"><a href="#" className="icon brands fa-facebook-f alt gold"><span className="label">Facebook</span></a></li>
-                            <li className="mobile-only-hide"><a href="#" className="icon brands fa-instagram alt gold"><span className="label">Instagram</span></a></li>
+                            <li className="mobile-only-hide"><a href="https://www.facebook.com/WisconsinDellsEscapeRooms/" className="icon brands fa-facebook-f alt gold"><span className="label">Facebook</span></a></li>
+                            <li className="mobile-only-hide"><a href="https://www.instagram.com/dellsescaperooms/" className="icon brands fa-instagram alt gold"><span className="label">Instagram</span></a></li>
                             <li className="mobile-only-view">
                                 <div style={{ background: 'black', position: 'fixed', right: 0, top: 0 }}>
-                                    <a className={`icon ${!this.state.isMenuOpen ? 'fa fa-bars' : 'fa fa-times'} alt gold`} onClick={() => this.toggleMenu()} />
+                                    <div className={`icon ${!this.state.isMenuOpen ? 'fa fa-bars' : 'fa fa-times'} alt gold`} onClick={() => this.toggleMenu()} />
                                 </div>
                             </li>
                             <li className="mobile-only-view"><MobileMenu isOpen={this.state.isMenuOpen} toggleMenu={this.toggleMenu} /></li>

@@ -1,9 +1,11 @@
 import React from "react"
+import mobile from 'is-mobile';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import "./styles.scss"
 
 import Carousel from "../../helpers/Carousel";
+import MobileMenu from "../MobileMenu";
 
 const BombSquad = () => (
     <div id="bombsquad" className="game-section">
@@ -31,7 +33,15 @@ const BombSquad = () => (
 
 const HazelWood = () => (
     <div id="hazelwood" className="game-section">
-        <div className="left-div">
+        {
+            mobile() &&
+            <div className="left-div">
+                <div className="poster">
+                    <Carousel interval={3600} images={["hazelwood", "th1", "th2"]} showThumbs={false} width="450px" />
+                </div>
+            </div>
+        }
+        <div className={mobile() ? "right-div" : "left-div"}>
             <h1 className="center">The Heist</h1>
             <p>
                 You’ve be perfecting your skills and now it’s time for the big payoff… Hazelwood
@@ -44,11 +54,14 @@ const HazelWood = () => (
                 <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
-        <div className="right-div">
-            <div className="poster">
-                <Carousel interval={3600} images={["hazelwood", "th1", "th2"]} showThumbs={false} width="450px" />
+        {
+            !mobile() &&
+            <div className="right-div">
+                <div className="poster">
+                    <Carousel interval={3600} images={["hazelwood", "th1", "th2"]} showThumbs={false} width="450px" />
+                </div>
             </div>
-        </div>
+        }
     </div>
 );
 
@@ -77,7 +90,15 @@ const MissionControl = () => (
 
 const Disavowed = () => (
     <div id="disavowed" className="game-section">
-        <div className="right-div">
+        {
+            mobile() &&
+            <div className="left-div">
+                <div className="poster">
+                    <Carousel interval={4000} images={["disavowed", "disavowed1", "disavowed2"]} showThumbs={false} width="450px" />
+                </div>
+            </div>
+        }
+        <div className={mobile() ? "right-div" : "left-div"}>
             <h1 className="center">Disavowed</h1>
             <p>
                 Tensions between the United States and the USSR are at a boiling point.
@@ -94,11 +115,14 @@ const Disavowed = () => (
                 <li><a href="https://dellsescaperooms.resova.us" target="_blank" rel="noopener noreferrer" className="button primary">Book Now</a></li>
             </ul>
         </div>
-        <div className="left-div">
-            <div className="poster">
-                <Carousel interval={4000} images={["disavowed", "disavowed1", "disavowed2"]} showThumbs={false} width="450px" />
+        {
+            !mobile() &&
+            <div className="right-div">
+                <div className="poster">
+                    <Carousel interval={4000} images={["disavowed", "disavowed1", "disavowed2"]} showThumbs={false} width="450px" />
+                </div>
             </div>
-        </div>
+        }
     </div>
 );
 
