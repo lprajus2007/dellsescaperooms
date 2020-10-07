@@ -1,6 +1,28 @@
+table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+td {
+    filter: invert(1);
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+th {
+    filter: invert(1);
+    font-weight: bold;
+    font-size: small;
+}
+
 .poster {
     width: 450px;
     height: 450px;
+}
+
+.nobottom {
+    padding-bottom: 0px !important;
 }
 
 .game-section {

@@ -96,8 +96,8 @@ export default class App extends Component {
                                     <li><AnchorLink href="#second">Reviews</AnchorLink></li>
                                     <li><AnchorLink href="#cta">Groups</AnchorLink></li>
                                     <li><AnchorLink href="#faq">FAQ</AnchorLink></li>
-                                    <li><a href="https://dellsescaperooms.resova.us/gift-voucher">Gift Vouchers</a></li>
-                                    <li><a href="https://dellsescaperooms.resova.us/">Book Now</a></li>
+                                    <li><a target="_blank" href="https://dellsescaperooms.resova.us/gift-voucher">Gift Vouchers</a></li>
+                                    <li><a target="_blank" href="https://dellsescaperooms.resova.us/">Book Now</a></li>
                                 </ul>
                             </nav>
                         </StickyHeader>

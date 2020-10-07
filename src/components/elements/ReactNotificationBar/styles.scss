@@ -11,7 +11,7 @@
   background: darkred;
 
   &.open {
-    max-height: 100px;
+    max-height: 300px;
   }
 }
 
@@ -21,7 +21,7 @@
   line-height: 1.2em;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 75px;
+  padding: 20px;
   color: white;
 
   a {
